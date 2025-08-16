@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>X Parts — قطع غيار السيارات</title>
+  <meta name="description" content="X Parts — أسهل طريقة للبحث وشراء قطع غيار السيارات الأصلية والبديلة. قارن الأسعار، تحقق من التوافق مع سيارتك، واطلب للتوصيل.">
+  <meta name="theme-color" content="#0a84ff">
+  <link rel="icon" href="assets/logo.svg">
+  <!-- Open Graph -->
+  <meta property="og:title" content="X Parts — قطع غيار السيارات">
+  <meta property="og:description" content="أسهل طريقة للبحث وشراء قطع غيار السيارات.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/hero-illustration.svg">
+  <meta property="og:url" content="https://example.com">
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "X Parts",
+    "applicationCategory": "ShoppingApplication",
+    "operatingSystem": "iOS, Android, Web",
+    "offers": {"@type":"Offer","price":"0","priceCurrency":"USD"},
+    "description": "منصة لشراء قطع غيار السيارات مع تحقق التوافق و مقارنة الأسعار."
+  }
+  </script>
+  <link rel="preload" href="styles.css" as="style">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <img src="assets/logo.svg" alt="X Parts logo" width="36" height="36">
+        <span>X Parts</span>
+      </a>
+      <nav class="nav">
+        <a href="#features">المزايا</a>
+        <a href="#categories">الفئات</a>
+        <a href="#how">كيف يعمل</a>
+        <a href="#faq">الأسئلة</a>
+      </nav>
+      <div class="cta-group">
+        <a href="#download" class="btn ghost">تحميل التطبيق</a>
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>ابحث، قارن، واشتري <span class="highlight">قطع غيار السيارات</span> بسهولة</h1>
+          <p>مع <strong>X Parts</strong> تقدر تلاقي القطعة المناسبة لسيارتك، تتحقق من التوافق برقم الهيكل (VIN)، وتقارن الأسعار بين موردين موثوقين.</p>
+          <form class="plate-form" id="searchForm" onsubmit="return false">
+            <label for="plate" class="visually-hidden">رقم اللوحة أو الشاسيه</label>
+            <input id="plate" name="plate" type="text" placeholder="أدخل VIN أو رقم اللوحة" autocomplete="off">
+            <button class="btn" onclick="onSearch()">ابحث الآن</button>
+          </form>
+          <div class="hero-badges" id="download">
+            <a class="store-badge" href="#" aria-label="iOS App (قريباً)">iOS</a>
+            <a class="store-badge" href="#" aria-label="Android App (قريباً)">Android</a>
+            <a class="store-badge" href="#" aria-label="تجربة الويب">Web</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img src="assets/hero-illustration.svg" alt="Illustration: car parts marketplace" width="560" height="420">
+        </div>
+      </div>
+    </section>
+
+    <section class="logos">
+      <div class="container logos-inner">
+        <span class="muted">شركاؤنا</span>
+        <div class="logo-row">
+          <div class="fake-logo">OEM</div>
+          <div class="fake-logo">Aftermarket</div>
+          <div class="fake-logo">Express</div>
+          <div class="fake-logo">SecurePay</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="container">
+        <h2>مزايا X Parts</h2>
+        <div class="grid-3">
+          <article class="card">
+            <h3>تحقق التوافق</h3>
+            <p>تأكد إن القطعة تناسب سيارتك برقم الهيكل <b>VIN</b> أو الموديل والسنة.</p>
+          </article>
+          <article class="card">
+            <h3>مقارنة الأسعار</h3>
+            <p>شوف أفضل سعر من مورّدين موثوقين مع تقييمات العملاء.</p>
+          </article>
+          <article class="card">
+            <h3>توصيل سريع</h3>
+            <p>اختر بين التوصيل السريع أو الاستلام من أقرب متجر.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories" id="categories">
+      <div class="container">
+        <h2>الفئات الأكثر طلبًا</h2>
+        <div class="grid-4">
+          <div class="cat">
+            <div class="cat-icon">🔧</div>
+            <h4>ميكانيكا</h4>
+            <p>فلاتر، سيور، بواجي، طرمبات.</p>
+          </div>
+          <div class="cat">
+            <div class="cat-icon">💡</div>
+            <h4>كهرباء</h4>
+            <p>بطاريات، لمبات، حساسات.</p>
+          </div>
+          <div class="cat">
+            <div class="cat-icon">🛡️</div>
+            <h4>هيكل وبدن</h4>
+            <p>أكصدامات، مرايات، شبك أمامي.</p>
+          </div>
+          <div class="cat">
+            <div class="cat-icon">🛞</div>
+            <h4>عجلات وفرامل</h4>
+            <p>إطارات، طنابير، تيل فرامل.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how" id="how">
+      <div class="container">
+        <h2>كيف يعمل X Parts؟</h2>
+        <ol class="steps">
+          <li><span>1</span> أدخل بيانات سيارتك أو رقم VIN.</li>
+          <li><span>2</span> اختر القطعة المناسبة وشوف البدائل.</li>
+          <li><span>3</span> قارن الأسعار وطرق التوصيل.</li>
+          <li><span>4</span> ادفع بأمان واستلم بسرعة.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta-inner">
+        <h2>جاهز تبدأ؟</h2>
+        <p>نزّل التطبيق أو جرّب نسخة الويب الآن.</p>
+        <a href="#download" class="btn">ابدأ مجانًا</a>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <div class="container">
+        <h2>الأسئلة الشائعة</h2>
+        <details>
+          <summary>هل القطع أصلية؟</summary>
+          <p>نوفر قطع أصلية وبدائل عالية الجودة، وستظهر لك العلامة بوضوح قبل الشراء.</p>
+        </details>
+        <details>
+          <summary>هل أشحن لمدينتي؟</summary>
+          <p>نغطي معظم المدن، وستظهر خيارات التوصيل المتاحة أثناء الطلب.</p>
+        </details>
+        <details>
+          <summary>طريقة الدفع؟</summary>
+          <p>بطاقات، مدى، ودفع عند الاستلام في مدن محددة.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="brand-col">
+        <a class="brand" href="#">
+          <img src="assets/logo.svg" alt="X Parts logo" width="28" height="28">
+          <span>X Parts</span>
+        </a>
+        <p class="muted">© <span id="y"></span> X Parts — جميع الحقوق محفوظة.</p>
+      </div>
+      <div class="links">
+        <a href="#top">الرئيسية</a>
+        <a href="#features">المزايا</a>
+        <a href="#faq">الأسئلة</a>
+        <a href="#download">تحميل</a>
+      </div>
+      <div class="contact">
+        <p>تواصل: <a href="mailto:sales@xparts.app">sales@xparts.app</a></p>
+        <p class="muted">هذه صفحة تسويقية للتطبيق.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
